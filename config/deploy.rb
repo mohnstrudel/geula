@@ -42,10 +42,6 @@ set :rollbar_role, Proc.new { :app }
 # Link the dirs, so uploaded assets won't be deleted after each deployment
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads node_modules client/node_modules}
 
-set :yarn_target_path, -> { release_path.join('subdir') } # default not set
-set :yarn_flags, '--production --silent --no-progress'    # default
-set :yarn_roles, :all                                     # default
-set :yarn_env_variables, {}                               # default
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
