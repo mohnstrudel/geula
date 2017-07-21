@@ -32,9 +32,13 @@ $(document).on('turbolinks:load', function(){
       },
       function (options) { // success
           //действие при успешной оплате
+          $('#result-status').empty();
+          $('#result-status').append("<div class='alert alert-success' role='alert'><strong>Спасибо! </strong>Мы успешно приняли ваше пожертвование.</div>");
       },
       function (reason, options) { // fail
           //действие при неуспешной оплате
+          $('#result-status').empty();
+          $('#result-status').append("<div class='alert alert-danger' role='alert'><strong>Ошибка. </strong>Мы не смогли обработать ваше пожертвование.<br/>Причина: " + reason + "</div>");
       });
   };
 
