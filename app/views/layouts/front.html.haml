@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title GEULA
+    = csrf_meta_tags
+    = stylesheet_link_tag    'front', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'https://widget.cloudpayments.ru/bundles/cloudpayments', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'front', 'data-turbolinks-track': 'reload'
+    
+
+  %body
+    .container
+      =render partial: 'front/navigation/header'
+      =yield
+      =render partial: 'front/navigation/footer'
+

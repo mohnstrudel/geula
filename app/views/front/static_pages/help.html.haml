@@ -1,0 +1,30 @@
+%form
+  .form-group
+    %label{:for => "NameInput", class: 'form-control-label'} Ваше имя
+    %input#NameInput.form-control{:placeholder => "Имя", :type => "text", name: 'name'}/
+
+  .form-group
+    %label{:for => "FamilyNameInput"} Фамилия
+    %input#FamilyNameInput.form-control{:placeholder => "Фамилия", :type => "text", name: 'family_name'}/
+  .form-group
+    %label{:for => "PhoneInput"} Телефон
+    %input#PhoneInput.form-control{:placeholder => "Телефон", :type => "text", name: 'phone'}/
+    %small#phoneHelp.form-text.text-muted Ваши данные не передаются третьим лицам
+  .form-group
+    %label{:for => "EmailInput"} Email 
+    %input#EmailInput.form-control{"aria-describedby" => "emailHelp", :placeholder => "Эл. почта", :type => "email", name: 'email'}/
+    %small#emailHelp.form-text.text-muted Ваши данные не передаются третьим лицам
+  .form-group.has-danger
+    %label{:for => "AmountInput"} Сумма
+    %input#AmountInput.form-control{:placeholder => "Сумма", :type => "text", value: 1000, name: 'amount'}/
+  .form-check
+    %label.form-check-label
+      %input.form-check-input{:type => "checkbox", name: 'recurrent'}/
+      Помогать ежемесячно
+    %small#recurrentHelp.form-text.text-muted При включении, пожертвования будут производиться автоматически с вашей карты каждый месяц.
+  %button.btn.btn-success{:type => "submit", id: 'submit_help'} Пожертвовать
+  .form-group
+    %small#fileHelp.form-text.text-muted
+      Вы можете остановить регулярные платежи в любой момент на 
+      %a{href: 'https://my.cloudpayments.ru/unsubscribe'}сайте системы CloudPayments.
+  

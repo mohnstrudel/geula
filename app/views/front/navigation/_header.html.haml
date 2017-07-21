@@ -1,0 +1,14 @@
+.header.clearfix
+  %nav
+    %ul.nav.nav-pills.float-right
+      %li.nav-item
+        =link_to root_path, class: "nav-link #{current_page?(root_path) ? 'active' : ''}" do
+          Главная
+          %span.sr-only (current)
+      %li.nav-item
+        =link_to confidential_path, class: "nav-link #{current_page?(confidential_path) ? 'active' : ''}" do
+          Пользовательское соглашение
+      %li.nav-item
+        =link_to help_path, class: "nav-link #{current_page?(help_path) ? 'active' : ''}" do
+          Пожертвовать
+  %h3.text-muted GEULA
