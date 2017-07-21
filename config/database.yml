@@ -82,4 +82,4 @@ production:
   <<: *default
   database: geula_production
   username: geula
-  password: <%= ENV['GEULA_DATABASE_PASSWORD'] %>
+  password: <%= Figaro.env.geula_database_password %>
