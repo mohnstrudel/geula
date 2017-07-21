@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/twbs/bootstrap-rubygem
-  revision: b156edfee2b9629ad4751ee2a118a04f824ef9eb
+  revision: bd3d58a56c46d1f87785298706b136b73c192b8b
   specs:
     bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
@@ -131,7 +131,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
-    minitest (5.10.2)
+    minitest (5.10.3)
     multi_json (1.12.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -176,7 +176,7 @@ GEM
     rollbar (2.15.0)
       multi_json
     ruby_dep (1.5.0)
-    ruby_parser (3.10.0)
+    ruby_parser (3.10.1)
       sexp_processor (~> 4.9)
     rubyzip (1.2.1)
     sass (3.5.1)
