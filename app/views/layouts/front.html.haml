@@ -6,6 +6,10 @@
     = stylesheet_link_tag    'front', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'https://widget.cloudpayments.ru/bundles/cloudpayments', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'front', 'data-turbolinks-track': 'reload'
+    %noscript
+      %div
+        %img{:alt => "", :src => "https://mc.yandex.ru/watch/45406785", :style => "position:absolute; left:-9999px;"}/
+
     
 
   %body
