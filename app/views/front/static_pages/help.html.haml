@@ -21,12 +21,12 @@
     %label.form-check-label
       %input.form-check-input{:type => "checkbox", name: 'recurrent'}/
       Помогать ежемесячно
-    %small#recurrentHelp.form-text.text-muted При включении, пожертвования будут производиться автоматически с вашей карты каждый месяц.
-  %button.btn.btn-success{:type => "submit", id: 'submit_help'} Пожертвовать
-  .form-group
+    %small#recurrentHelp.form-text.text-muted Выберите, если хотите переводить пожертвования ежемесячно в автоматическом режиме.
     %small#fileHelp.form-text.text-muted
       Вы можете остановить регулярные платежи в любой момент на 
       %a{href: 'https://my.cloudpayments.ru/unsubscribe'}сайте системы CloudPayments.
+  %button.btn.btn-success{:type => "submit", id: 'submit_help'} Пожертвовать
+    
   
   .form-group
     #result-status

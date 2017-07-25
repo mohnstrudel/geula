@@ -1,4 +1,9 @@
 $(document).on('turbolinks:load', function(){
+
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
   //note: в примере используется библиотека jquery
 
   var pay = function () {
@@ -23,7 +28,7 @@ $(document).on('turbolinks:load', function(){
 
       widget.charge({ // options
           publicId: 'test_api_00000000000000000000002', //id из личного кабинета
-          description: 'Пожертвование в фонд GEULA', //назначение
+          description: "Пожертвование в Общину горских евреев 'Геула'", //назначение
           amount: amount, //сумма
           currency: 'RUB', //валюта
           accountId: accountId, //идентификатор плательщика (обязательно для создания подписки)
@@ -52,7 +57,8 @@ $(document).on('turbolinks:load', function(){
         lastName = $('input[name=family_name]'),
         phone = $('input[name=phone]'),
         amount = $('input[name=amount]'),
-        email = $('input[name=email]');
+        email = $('input[name=email]'),
+        email_value = email.val();
 
         if(firstName.val() == ""){
           firstName.addClass('alert-danger');
@@ -82,7 +88,7 @@ $(document).on('turbolinks:load', function(){
           amount.removeClass('alert-danger').addClass('alert-success');
         }
 
-        if(email.val() == ""){
+        if(email.val() == "" || !validateEmail(email_value)){
           email.addClass('alert-danger');
           error = true;
         } else {
