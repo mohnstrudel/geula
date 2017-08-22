@@ -28,7 +28,7 @@ $(document).on('turbolinks:load', function(){
 
       widget.charge({ // options
           // publicId: 'pk_8fe312fcccfcf8eac2eb2ab3f2e59', //id из личного кабинета ТЕСТОВЫЙ
-          publicID: 'pk_b40d65b2826ab34c35923a9d7ecf3', // БОЕВОЙ
+          publicId: 'pk_b40d65b2826ab34c35923a9d7ecf3', // БОЕВОЙ
           description: "Пожертвование в Общину горских евреев 'Геула'", //назначение
           amount: amount, //сумма
           currency: 'RUB', //валюта
