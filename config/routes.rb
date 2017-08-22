@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     root 'static_pages#support'
     get 'help', to: 'static_pages#help'
     get 'confidential', to: 'static_pages#confidential'
+    get 'success', to: 'static_pages#success'
   end
   
 end

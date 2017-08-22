@@ -10,4 +10,7 @@ class Front::StaticPagesController < FrontController
     @url = "http://geula-center.ru"
   end
 
+  def success
+  end
+
 end

@@ -27,7 +27,8 @@ $(document).on('turbolinks:load', function(){
       var accountId = $('input[name=email]').val();
 
       widget.charge({ // options
-          publicId: 'test_api_00000000000000000000002', //id из личного кабинета
+          // publicId: 'pk_8fe312fcccfcf8eac2eb2ab3f2e59', //id из личного кабинета ТЕСТОВЫЙ
+          publicID: 'pk_b40d65b2826ab34c35923a9d7ecf3', // БОЕВОЙ
           description: "Пожертвование в Общину горских евреев 'Геула'", //назначение
           amount: amount, //сумма
           currency: 'RUB', //валюта
@@ -39,6 +40,8 @@ $(document).on('turbolinks:load', function(){
           //действие при успешной оплате
           $('#result-status').empty();
           $('#result-status').append("<div class='alert alert-success' role='alert'><strong>Спасибо! </strong>Мы успешно приняли ваше пожертвование.</div>");
+          $('#successModal').modal('toggle');
+          // window.location.replace("/success");
       },
       function (reason, options) { // fail
           //действие при неуспешной оплате
